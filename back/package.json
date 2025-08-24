@@ -1,0 +1,16 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "primer proyecto back node",
+  "license": "ISC",
+  "author": "Mati",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Algo No Ta Andando Wacho\"",
+    "dev": "tsc index.ts && node index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
