@@ -25,7 +25,6 @@ const f = (request : IncomingMessage, response : ServerResponse<IncomingMessage>
     const { method } = request
 
     if (method == "GET"){
-        console.log("locales")
         response.writeHead(200, {'Content-Type': 'aplication/json'})
         response.end(JSON.stringify(locales))
     }
