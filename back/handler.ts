@@ -6,6 +6,7 @@ import route from './routes/imports.ts'
 type PathRoute  = {
     path: string,
     function: Function
+    childs?: PathRoute[]
 }
 
 
@@ -19,6 +20,14 @@ const pathRoutes: PathRoute[] =
     {
         path: "/usuarios/{{user_id}}",
         function: route.user_id.f
+    },
+    {
+        path: "/usuarios/{{user_id}}/localidad",
+        function: route.localidad.f
+    },
+    {
+        path: "/locales",
+        function: route.locales.f
     }
 ]
 
