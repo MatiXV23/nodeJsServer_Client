@@ -7,14 +7,12 @@ const f = ({user_id}: {user_id: number}, request : IncomingMessage, response : S
 
     const { method } = request
 
-    console.log({method, "/users/user_id": user_id})
     if (!users) {
         response.writeHead(404, {'Content-Type': 'aplication/json'})
         response.end(JSON.stringify({message:"Pagina no encontrada"}))
     }
 
     const user_idx = users.findIndex(u => u.user_id == user_id)
-    console.log(user_idx)
 
     if (user_idx === -1){
         response.writeHead(404, {'Content-Type': 'aplication/json'})
